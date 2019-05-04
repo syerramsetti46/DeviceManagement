@@ -1,0 +1,25 @@
+
+
+.input-forms{
+    width: 50%;
+    height: 3.5rem;
+    display: inline;
+    padding: 0 4.5rem;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: "Times New Roman";
+    letter-spacing:1px;
+};
+
+.textField:after {
+    content:"\a";
+    white-space: pre;
+};
+
+.button{
+    font-family: "Times New Roman"; 
+    align-items: center;
+    width: 50%;
+    height: 3.5rem;
+}

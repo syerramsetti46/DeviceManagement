@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import AddNewDevice from './components/AddNewDevice/AddNewDevice';
+import Home from './components/Home/Home';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header className="main-header">
+        <nav className="main-header__nav">
+            <ul className="main-header__item-list">
+                {/* <li><a className="active" href="/">Home</a></li> */}
+                <li className="main-header__item"><a className="active" href="/">Home</a></li>
+                <li className="main-header__item"><a href="/admin/addNewDevice">Add Device</a></li>
+            </ul>
+        </nav>
         </header>
+
+          <AddNewDevice/>
       </div>
     );
   }

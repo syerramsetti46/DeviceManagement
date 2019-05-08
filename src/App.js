@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import AddNewDevice from './components/AddNewDevice/AddNewDevice';
-import Home from './components/Home/Home';
+import AddNewDevice from './components/AddNewDevice';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="main-header">
-        <nav className="main-header__nav">
-            <ul className="main-header__item-list">
-                {/* <li><a className="active" href="/">Home</a></li> */}
-                <li className="main-header__item"><a className="active" href="/">Home</a></li>
-                <li className="main-header__item"><a href="/admin/addNewDevice">Add Device</a></li>
+      <Fragment>
+        <nav className="navbar navbar-expand-sm fixed-top navbar-dark" style={{ backgroundColor: '#dbc441' }}>
+          <a className="navbar-brand text-dark" href="#">Title</a>
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <a className="nav-link text-dark" href="#Home">Home <span className="sr-only">(current)</span></a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-dark" href="#Add">Add Device</a>
+              </li>
             </ul>
+          </div>
         </nav>
-        </header>
-
-          <AddNewDevice/>
-      </div>
+        <AddNewDevice />
+      </Fragment>
     );
   }
 }
